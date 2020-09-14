@@ -20,22 +20,24 @@ namespace UnitTestProject2
             int x;
             int y;
             int segment = 1;
-            int a;
-            int b;
+            
 
             //act
             Random r = new Random();
-            a = r.Next(0, 20) * segment;
-            b = r.Next(0, 20) * segment;
+            Owoc owoc = new Owoc(1);
+            owoc.nowy_owoc();
+            
             x = r.Next(0, 20) * segment;
             y = r.Next(0, 20) * segment;
-            
+
+
 
 
 
             //assert
-            Assert.AreNotEqual(x,  a, "blad");
-            Assert.AreNotEqual(y, b, "blad");
+            Assert.AreNotEqual(x, owoc, "blad") ;
+            Assert.AreNotEqual(y, owoc, "blad");
+            
 
 
         }
@@ -43,12 +45,13 @@ namespace UnitTestProject2
         public void TestOwoc()
         {
             //arrange
-            int segment = 0;
-            int nowy;
+            int segment;
+            
             //act
-            nowy = segment;
+            Owoc nowy = new Owoc(1);
+            Owoc nowy2 = new Owoc(1);
             //assert
-            Assert.AreEqual(nowy, segment, "blad");
+            Assert.AreEqual(nowy.segment, nowy2.segment, "blad");
         }
         
     }

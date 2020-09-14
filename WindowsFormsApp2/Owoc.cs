@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace WindowsFormsApp2
 {
-    class Owoc
+   public class Owoc
     {
         public int x;
         public int y;
